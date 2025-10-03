@@ -1,0 +1,89 @@
+.card {
+  background-color: #1e293b;
+  padding: 2rem;
+  border-radius: 8px;
+  min-width: 500px;
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.3rem;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+}
+
+.formGroup .label {
+  font-size: 0.8rem;
+  margin-bottom: 5px;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 1rem;
+  color: cornflowerblue;
+}
+
+.formGroup .input {
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  outline: none;
+  box-shadow: none;
+}
+
+.input::placeholder {
+  color: #888;
+}
+
+.input.weak {
+  color: #e74c3c;
+  border: 2.5px solid #e74c3c;
+}
+.input.medium {
+  color: #f39c12; /* orange */
+  border: 2.5px solid #f39c12;
+}
+.input.strong {
+  color: #2ecc71; /* green */
+  border: 2.5px solid #2ecc71;
+}
+
+.label.labelWeak {
+  color: #e74c3c;
+}
+.label.labelMedium {
+  color: #f39c12; /* orange */
+}
+.label.labelStrong {
+  color: #2ecc71; /* green */
+}
+
+.passwordStrengthContainer {
+  margin-top: 0.5rem;
+}
+
+.passwordStrengthIcon {
+  margin-right: 0.3rem;
+}
+
+.passwordStrengthItem {
+  font-size: 0.8rem;
+  color: #888;
+}
+
+.submit {
+  background-color: cornflowerblue;
+  flex-grow: 0;
+  outline: none;
+  border: none;
+  color: black;
+  padding: 0.5rem 1.2rem;
+  border-radius: 4px;
+
+  /* 👇 key parts */
+  align-self: flex-start; /* makes button only as wide as its content */
+  width: auto;
+}
