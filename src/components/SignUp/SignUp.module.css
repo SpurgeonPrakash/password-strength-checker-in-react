@@ -51,13 +51,22 @@
   border: 2.5px solid #2ecc71;
 }
 
-.label.labelWeak {
+.passStrength {
+  font-size: 0.8rem;
+  position: absolute;
+  right: 0;
+}
+
+.label.labelWeak,
+.passStrength.labelWeak {
   color: #e74c3c;
 }
-.label.labelMedium {
+.label.labelMedium,
+.passStrength.labelMedium {
   color: #f39c12; /* orange */
 }
-.label.labelStrong {
+.label.labelStrong,
+.passStrength.labelStrong {
   color: #2ecc71; /* green */
 }
 
@@ -74,6 +83,10 @@
   color: #888;
 }
 
+.relative {
+  position: relative;
+}
+
 .submit {
   background-color: cornflowerblue;
   flex-grow: 0;
@@ -86,4 +99,65 @@
   /* 👇 key parts */
   align-self: flex-start; /* makes button only as wide as its content */
   width: auto;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+  .card {
+    min-width: 400px;
+    padding: 1.5rem;
+    margin: 1rem;
+  }
+
+  .form {
+    gap: 1rem;
+  }
+
+  .passStrength {
+    position: static;
+    margin-top: 0.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .card {
+    min-width: unset;
+    width: 100%;
+    padding: 1rem;
+    margin: 0.5rem;
+    border-radius: 4px;
+  }
+
+  .header {
+    font-size: 1.5rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .formGroup .input {
+    padding: 10px 12px;
+  }
+
+  .passwordStrengthItem {
+    font-size: 0.75rem;
+  }
+
+  .submit {
+    width: 100%;
+    align-self: stretch;
+    padding: 0.7rem;
+  }
+}
+
+@media (max-width: 320px) {
+  .card {
+    padding: 0.8rem;
+  }
+
+  .header {
+    font-size: 1.3rem;
+  }
+
+  .passwordStrengthItem {
+    font-size: 0.7rem;
+  }
 }
