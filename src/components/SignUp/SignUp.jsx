@@ -16,7 +16,7 @@ const SignUp = () => {
             placeholder="Enter your username"
           />
         </div>
-        <div className={styles.formGroup}>
+        <div className={`${styles.formGroup} ${styles.relative}`}>
           <label htmlFor="password" className={`${styles.label} `}>
             Password
           </label>
